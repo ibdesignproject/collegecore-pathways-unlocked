@@ -12,78 +12,190 @@ const Universities = () => {
       shortName: "MIT",
       image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
       stats: {
-        avgGPA: "4.17",
-        satRange: "1520-1580",
+        satRange: "1540-1580",
         actRange: "35-36",
         acceptanceRate: "4%",
-        classRankTop10: "95%"
+        classRankTop10: "100%",
+        gpaData: "Not Published",
+        testPolicy: "Required"
       },
-      admissionFactors: ["Essays", "Research Experience", "Recommendations", "Extracurriculars", "STEM Activities"]
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays", "Recommendations", "Talent/Ability", "Character/Personal Qualities"],
+        important: ["Test Scores", "Interview", "Extracurriculars", "Volunteer Work", "Work Experience"],
+        considered: [],
+        notConsidered: ["Alumni Relation"]
+      }
+    },
+    {
+      name: "Harvard University",
+      shortName: "Harvard",
+      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "~1535 avg",
+        actRange: "~35 avg",
+        acceptanceRate: "3%",
+        classRankTop10: "94%",
+        gpaData: "58% have 4.0+",
+        testPolicy: "Optional"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays", "Recommendations", "Extracurriculars", "Talent/Ability", "Character/Personal Qualities"],
+        important: ["Interview", "Volunteer Work", "Work Experience"],
+        considered: ["Test Scores", "Alumni Relation"],
+        notConsidered: []
+      }
+    },
+    {
+      name: "Stanford University",
+      shortName: "Stanford",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "1500-1570",
+        actRange: "34-35",
+        acceptanceRate: "4%",
+        classRankTop10: "95%",
+        gpaData: "63% have 4.0+",
+        testPolicy: "Optional"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays", "Recommendations", "Extracurriculars", "Talent/Ability", "Character/Personal Qualities"],
+        important: ["Interview"],
+        considered: ["Test Scores", "Alumni Relation", "Volunteer Work", "Work Experience"],
+        notConsidered: []
+      }
     },
     {
       name: "Cornell University",
       shortName: "Cornell",
       image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       stats: {
-        avgGPA: "4.07",
-        satRange: "1470-1550",
-        actRange: "33-35",
-        acceptanceRate: "9%",
-        classRankTop10: "89%"
+        satRange: "1560 avg",
+        actRange: "35 avg",
+        acceptanceRate: "7%",
+        classRankTop10: "99.5%",
+        gpaData: "Not Included",
+        testPolicy: "Required"
       },
-      admissionFactors: ["Academic Rigor", "Essays", "Leadership", "Community Service", "Recommendations"]
-    },
-    {
-      name: "University of Illinois Urbana-Champaign",
-      shortName: "UIUC",
-      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop",
-      stats: {
-        avgGPA: "3.83",
-        satRange: "1340-1510",
-        actRange: "29-34",
-        acceptanceRate: "45%",
-        classRankTop10: "67%"
-      },
-      admissionFactors: ["Academic Performance", "Essays", "Extracurriculars", "Work Experience", "Recommendations"]
-    },
-    {
-      name: "UC Berkeley",
-      shortName: "Berkeley",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
-      stats: {
-        avgGPA: "4.18",
-        satRange: "1415-1570",
-        actRange: "32-35",
-        acceptanceRate: "11%",
-        classRankTop10: "95%"
-      },
-      admissionFactors: ["Academic Excellence", "Personal Insight Essays", "Leadership", "Community Impact", "Diversity"]
-    },
-    {
-      name: "UC San Diego",
-      shortName: "UCSD",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
-      stats: {
-        avgGPA: "4.08",
-        satRange: "1340-1520",
-        actRange: "30-35",
-        acceptanceRate: "24%",
-        classRankTop10: "87%"
-      },
-      admissionFactors: ["Academic Achievement", "Personal Qualities", "Extracurriculars", "Essays", "Special Talents"]
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "Essays", "Recommendations", "Extracurriculars", "Talent/Ability", "Character/Personal Qualities"],
+        important: ["Class Rank", "GPA"],
+        considered: ["Test Scores", "Interview", "Alumni Relation", "Volunteer Work", "Work Experience"],
+        notConsidered: []
+      }
     },
     {
       name: "University of Pennsylvania",
       shortName: "UPenn",
       image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       stats: {
-        avgGPA: "4.04",
-        satRange: "1510-1570",
-        actRange: "34-36",
+        satRange: "1570 avg",
+        actRange: "36 avg",
         acceptanceRate: "6%",
-        classRankTop10: "92%"
+        classRankTop10: "100%",
+        gpaData: "58% have 4.0+",
+        testPolicy: "Optional"
       },
-      admissionFactors: ["Academic Excellence", "Leadership", "Essays", "Recommendations", "Demonstrated Interest"]
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays", "Recommendations", "Character/Personal Qualities"],
+        important: ["Class Rank", "Extracurriculars", "Talent/Ability", "Volunteer Work", "Work Experience"],
+        considered: ["Test Scores", "Alumni Relation"],
+        notConsidered: ["Interview"]
+      }
+    },
+    {
+      name: "UC Berkeley",
+      shortName: "Berkeley",
+      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "Not Considered",
+        actRange: "Not Considered",
+        acceptanceRate: "11%",
+        classRankTop10: "100%",
+        gpaData: "37% have 4.0+, 51% above 3.75",
+        testPolicy: "Not Considered"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays"],
+        important: ["Extracurriculars", "Character/Personal Qualities", "Volunteer Work", "Work Experience"],
+        considered: ["Talent/Ability"],
+        notConsidered: ["Class Rank", "Test Scores", "Recommendations", "Interview", "Alumni Relation"]
+      }
+    },
+    {
+      name: "UCLA",
+      shortName: "UCLA",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "Not Considered",
+        actRange: "Not Considered",
+        acceptanceRate: "9%",
+        classRankTop10: "100%",
+        gpaData: "52.4% have 4.0+, 80.8% above 3.75",
+        testPolicy: "Not Considered"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays"],
+        important: ["Extracurriculars", "Talent/Ability", "Character/Personal Qualities", "Volunteer Work", "Work Experience"],
+        considered: ["Class Rank"],
+        notConsidered: ["Test Scores", "Recommendations", "Interview", "Alumni Relation"]
+      }
+    },
+    {
+      name: "UC San Diego",
+      shortName: "UCSD",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "Not Considered",
+        actRange: "Not Considered",
+        acceptanceRate: "24%",
+        classRankTop10: "100%",
+        gpaData: "27.3% have 4.0+, 52.5% above 3.75",
+        testPolicy: "Not Considered"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA", "Essays"],
+        important: ["Extracurriculars", "Talent/Ability", "Character/Personal Qualities", "Volunteer Work"],
+        considered: ["Class Rank", "Work Experience"],
+        notConsidered: ["Test Scores", "Recommendations", "Interview", "Alumni Relation"]
+      }
+    },
+    {
+      name: "University of Illinois Urbana-Champaign",
+      shortName: "UIUC",
+      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "1510 avg",
+        actRange: "30-36",
+        acceptanceRate: "45%",
+        classRankTop10: "99%",
+        gpaData: "Not Included",
+        testPolicy: "Optional"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "GPA"],
+        important: ["Test Scores", "Essays", "Extracurriculars", "Talent/Ability", "Character/Personal Qualities"],
+        considered: ["Volunteer Work", "Work Experience"],
+        notConsidered: ["Class Rank", "Recommendations", "Interview", "Alumni Relation"]
+      }
+    },
+    {
+      name: "University of Texas at Austin",
+      shortName: "UT Austin",
+      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop",
+      stats: {
+        satRange: "~1410 avg",
+        actRange: "~31 avg",
+        acceptanceRate: "31%",
+        classRankTop10: "78%",
+        gpaData: "93% in top half of class",
+        testPolicy: "Optional"
+      },
+      admissionFactors: {
+        veryImportant: ["Academic Rigor", "Class Rank", "GPA", "Essays"],
+        important: ["Test Scores", "Recommendations", "Extracurriculars", "Talent/Ability", "Character/Personal Qualities", "Volunteer Work", "Work Experience"],
+        considered: [],
+        notConsidered: ["Interview", "Alumni Relation"]
+      }
     }
   ];
 
@@ -99,6 +211,7 @@ const Universities = () => {
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
               <Link to="/universities" className="text-blue-600 font-medium">Universities</Link>
               <Link to="/book-session" className="text-gray-700 hover:text-blue-600 transition-colors">Book a Session</Link>
               <Link to="/community" className="text-gray-700 hover:text-blue-600 transition-colors">Community</Link>
@@ -157,35 +270,47 @@ const Universities = () => {
                       <div className="flex items-center justify-center mb-2">
                         <GraduationCap className="h-5 w-5 text-blue-600" />
                       </div>
-                      <div className="text-sm text-gray-600">Avg GPA</div>
-                      <div className="font-bold text-gray-900">{university.stats.avgGPA}</div>
+                      <div className="text-sm text-gray-600">Test Policy</div>
+                      <div className="font-bold text-gray-900 text-xs">{university.stats.testPolicy}</div>
                     </div>
                     <div className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center justify-center mb-2">
                         <TrendingUp className="h-5 w-5 text-blue-600" />
                       </div>
-                      <div className="text-sm text-gray-600">SAT Range</div>
-                      <div className="font-bold text-gray-900">{university.stats.satRange}</div>
+                      <div className="text-sm text-gray-600">Top 10% Class</div>
+                      <div className="font-bold text-gray-900">{university.stats.classRankTop10}</div>
                     </div>
                   </div>
 
-                  {/* Additional Stats */}
+                  {/* Test Score Stats */}
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">ACT Range:</span>
-                      <span className="font-semibold">{university.stats.actRange}</span>
+                      <span className="text-gray-600">SAT Range:</span>
+                      <span className="font-semibold text-sm">{university.stats.satRange}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Top 10% Class Rank:</span>
-                      <span className="font-semibold">{university.stats.classRankTop10}</span>
+                      <span className="text-gray-600">ACT Range:</span>
+                      <span className="font-semibold text-sm">{university.stats.actRange}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">GPA Data:</span>
+                      <span className="font-semibold text-sm">{university.stats.gpaData}</span>
                     </div>
                   </div>
 
                   {/* Admission Factors */}
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Admission Factors</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {university.admissionFactors.map((factor, idx) => (
+                    <h4 className="font-semibold text-gray-900 mb-3">Very Important Factors</h4>
+                    <div className="flex flex-wrap gap-1 mb-3">
+                      {university.admissionFactors.veryImportant.slice(0, 4).map((factor, idx) => (
+                        <Badge key={idx} className="text-xs bg-red-100 text-red-800 hover:bg-red-200">
+                          {factor}
+                        </Badge>
+                      ))}
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Important Factors</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {university.admissionFactors.important.slice(0, 3).map((factor, idx) => (
                         <Badge key={idx} variant="outline" className="text-xs">
                           {factor}
                         </Badge>

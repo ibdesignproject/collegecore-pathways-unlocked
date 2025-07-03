@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -354,13 +353,9 @@ const Universities = () => {
               <Link to="/" className="text-gray-700 hover:text-blue-900 transition-colors">Home</Link>
               <Link to="/universities" className="text-blue-900 font-medium">Universities</Link>
               <Link to="/book-session" className="text-gray-700 hover:text-blue-900 transition-colors">Book a Session</Link>
-              <Link to="/community" className="text-gray-700 hover:text-blue-900 transition-colors">Community</Link>
               <Link to="/about" className="text-gray-700 hover:text-blue-900 transition-colors">About</Link>
               <Link to="/contact" className="text-gray-700 hover:text-blue-900 transition-colors">Contact</Link>
             </div>
-            <Button className="bg-blue-900 hover:bg-blue-800">
-              Join Now
-            </Button>
           </div>
         </div>
       </nav>

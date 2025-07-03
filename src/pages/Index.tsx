@@ -20,13 +20,9 @@ const Index = () => {
               <Link to="/" className="text-blue-900 font-medium">Home</Link>
               <Link to="/universities" className="text-gray-700 hover:text-blue-900 transition-colors">Universities</Link>
               <Link to="/book-session" className="text-gray-700 hover:text-blue-900 transition-colors">Book a Session</Link>
-              <Link to="/community" className="text-gray-700 hover:text-blue-900 transition-colors">Community</Link>
               <Link to="/about" className="text-gray-700 hover:text-blue-900 transition-colors">About</Link>
               <Link to="/contact" className="text-gray-700 hover:text-blue-900 transition-colors">Contact</Link>
             </div>
-            <Button className="bg-blue-900 hover:bg-blue-800">
-              Join Now
-            </Button>
           </div>
         </div>
       </nav>
@@ -46,11 +42,6 @@ const Index = () => {
             <Button size="lg" className="bg-blue-900 hover:bg-blue-800 text-lg px-8 py-4">
               <Link to="/book-session" className="flex items-center">
                 Book a Session <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-gray-300">
-              <Link to="/community" className="flex items-center">
-                Join the Community <Users className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -115,7 +106,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Journey?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of students who've found their path with CollegeCore mentors for just $20 per session.
+            Connect with college mentors who understand your path for just $20 per session.
           </p>
           <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4">
             <Link to="/book-session">Get Started Today</Link>
@@ -140,7 +131,6 @@ const Index = () => {
               <ul className="space-y-2">
                 <li><Link to="/universities" className="text-gray-600 hover:text-blue-900">Universities</Link></li>
                 <li><Link to="/book-session" className="text-gray-600 hover:text-blue-900">Book a Session</Link></li>
-                <li><Link to="/community" className="text-gray-600 hover:text-blue-900">Community</Link></li>
                 <li><Link to="/about" className="text-gray-600 hover:text-blue-900">About</Link></li>
               </ul>
             </div>

@@ -16,7 +16,7 @@ const BookSession = () => {
       bio: "Passionate about helping students navigate STEM admissions. Got into MIT with a focus on research and coding projects.",
       rating: 4.9,
       sessionsCompleted: 127,
-      price: 25,
+      price: 20,
       availability: "Mon-Fri 7-9 PM EST",
       specialties: ["STEM Applications", "Research Experience", "Coding Projects", "Interview Prep"],
       calendlyLink: "https://calendly.com/sarah-chen-collegecore"
@@ -30,7 +30,7 @@ const BookSession = () => {
       bio: "Transferred from community college to Cornell. Specializing in business school applications and scholarship strategies.",
       rating: 4.8,
       sessionsCompleted: 89,
-      price: 22,
+      price: 20,
       availability: "Tue, Thu, Sat 6-10 PM EST",
       specialties: ["Business School Apps", "Transfer Applications", "Scholarships", "Community College Path"],
       calendlyLink: "https://calendly.com/marcus-johnson-collegecore"
@@ -58,7 +58,7 @@ const BookSession = () => {
       bio: "Wharton student with experience in finance internships. Helps with Ivy League applications and business-focused essays.",
       rating: 4.9,
       sessionsCompleted: 203,
-      price: 28,
+      price: 20,
       availability: "Mon, Wed, Fri 7-9 PM EST",
       specialties: ["Ivy League Apps", "Wharton Business", "Finance Career Prep", "Essay Writing"],
       calendlyLink: "https://calendly.com/david-kim-collegecore"
@@ -72,7 +72,7 @@ const BookSession = () => {
       bio: "Engineering student with internship experience at top tech companies. Focuses on technical program applications.",
       rating: 4.8,
       sessionsCompleted: 91,
-      price: 23,
+      price: 20,
       availability: "Weekends 10 AM - 4 PM CST",
       specialties: ["Engineering Programs", "Tech Internships", "State School Excellence", "Women in STEM"],
       calendlyLink: "https://calendly.com/aisha-patel-collegecore"
@@ -86,7 +86,7 @@ const BookSession = () => {
       bio: "Bioengineering student passionate about research and innovation. Helps with STEM applications and research positioning.",
       rating: 4.7,
       sessionsCompleted: 67,
-      price: 21,
+      price: 20,
       availability: "Tue, Thu 8-10 PM PST",
       specialties: ["Bioengineering", "Research Applications", "UC System", "Lab Experience"],
       calendlyLink: "https://calendly.com/jake-thompson-collegecore"
@@ -94,7 +94,7 @@ const BookSession = () => {
   ];
 
   const handleBookSession = (calendlyLink: string, mentorName: string) => {
-    // In a real implementation, this would integrate with Calendly and Stripe
+    // In a real implementation, this would integrate with Calendly
     window.open(calendlyLink, '_blank');
     console.log(`Booking session with ${mentorName}`);
   };
@@ -107,19 +107,16 @@ const BookSession = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="text-2xl font-bold text-gray-900">
-                College<span className="text-blue-600">Core</span>
+                College<span className="text-blue-900">Core</span>
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/universities" className="text-gray-700 hover:text-blue-600 transition-colors">Universities</Link>
-              <Link to="/book-session" className="text-blue-600 font-medium">Book a Session</Link>
-              <Link to="/community" className="text-gray-700 hover:text-blue-600 transition-colors">Community</Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+              <Link to="/" className="text-gray-700 hover:text-blue-900 transition-colors">Home</Link>
+              <Link to="/universities" className="text-gray-700 hover:text-blue-900 transition-colors">Universities</Link>
+              <Link to="/book-session" className="text-blue-900 font-medium">Book a Session</Link>
+              <Link to="/about" className="text-gray-700 hover:text-blue-900 transition-colors">About</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-blue-900 transition-colors">Contact</Link>
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Join Now
-            </Button>
           </div>
         </div>
       </nav>
@@ -136,16 +133,16 @@ const BookSession = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
             <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-2 text-blue-600" />
+              <Clock className="h-4 w-4 mr-2 text-blue-900" />
               15-20 minute sessions
             </div>
             <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-2 text-blue-600" />
+              <Calendar className="h-4 w-4 mr-2 text-blue-900" />
               Flexible scheduling
             </div>
             <div className="flex items-center">
-              <DollarSign className="h-4 w-4 mr-2 text-blue-600" />
-              Starting at $20
+              <DollarSign className="h-4 w-4 mr-2 text-blue-900" />
+              $20 per session
             </div>
           </div>
         </div>
@@ -164,7 +161,7 @@ const BookSession = () => {
                       alt={mentor.name}
                       className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-blue-100"
                     />
-                    <Badge className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white">
+                    <Badge className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-900 text-white">
                       {mentor.university}
                     </Badge>
                   </div>
@@ -187,7 +184,7 @@ const BookSession = () => {
                       </span>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600">${mentor.price}</div>
+                      <div className="text-2xl font-bold text-blue-900">${mentor.price}</div>
                       <div className="text-xs text-gray-600">per session</div>
                     </div>
                   </div>
@@ -211,13 +208,13 @@ const BookSession = () => {
 
                   {/* Availability */}
                   <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="h-4 w-4 mr-2 text-blue-600" />
+                    <Clock className="h-4 w-4 mr-2 text-blue-900" />
                     {mentor.availability}
                   </div>
 
                   {/* Book Button */}
                   <Button 
-                    className="w-full bg-blue-600 hover:bg-blue-700" 
+                    className="w-full bg-blue-900 hover:bg-blue-800" 
                     onClick={() => handleBookSession(mentor.calendlyLink, mentor.name)}
                   >
                     Book Session with {mentor.name.split(' ')[0]}
@@ -240,27 +237,27 @@ const BookSession = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="h-8 w-8 text-blue-600" />
+                <Calendar className="h-8 w-8 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">1. Choose & Schedule</h3>
               <p className="text-gray-600">
-                Select your mentor and book a convenient time slot through our integrated Calendly system.
+                Select your mentor and book a convenient time slot through our integrated scheduling system.
               </p>
             </div>
             
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="h-8 w-8 text-blue-600" />
+                <DollarSign className="h-8 w-8 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">2. Secure Payment</h3>
               <p className="text-gray-600">
-                Pay securely through Stripe. Your payment is protected and processed safely.
+                Pay securely for your $20 session. Your payment is protected and processed safely.
               </p>
             </div>
             
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-8 w-8 text-blue-600" />
+                <BookOpen className="h-8 w-8 text-blue-900" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">3. Get Guidance</h3>
               <p className="text-gray-600">
@@ -278,10 +275,10 @@ const BookSession = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join our community and get access to exclusive resources, group sessions, and ongoing support.
+            Connect with college mentors who understand your path for just $20 per session.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-            <Link to="/community">Join the Community</Link>
+          <Button size="lg" className="bg-blue-900 hover:bg-blue-800" asChild>
+            <Link to="/book-session">Book Your Session</Link>
           </Button>
         </div>
       </section>

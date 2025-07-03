@@ -57,19 +57,16 @@ const About = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="text-2xl font-bold text-gray-900">
-                College<span className="text-blue-600">Core</span>
+                College<span className="text-blue-900">Core</span>
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/universities" className="text-gray-700 hover:text-blue-600 transition-colors">Universities</Link>
-              <Link to="/book-session" className="text-gray-700 hover:text-blue-600 transition-colors">Book a Session</Link>
-              <Link to="/community" className="text-gray-700 hover:text-blue-600 transition-colors">Community</Link>
-              <Link to="/about" className="text-blue-600 font-medium">About</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+              <Link to="/" className="text-gray-700 hover:text-blue-900 transition-colors">Home</Link>
+              <Link to="/universities" className="text-gray-700 hover:text-blue-900 transition-colors">Universities</Link>
+              <Link to="/book-session" className="text-gray-700 hover:text-blue-900 transition-colors">Book a Session</Link>
+              <Link to="/about" className="text-blue-900 font-medium">About</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-blue-900 transition-colors">Contact</Link>
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Join Now
-            </Button>
           </div>
         </div>
       </nav>
@@ -130,7 +127,7 @@ const About = () => {
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="h-8 w-8 text-blue-600" />
+                    <value.icon className="h-8 w-8 text-blue-900" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -190,7 +187,7 @@ const About = () => {
                     className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-blue-100"
                   />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
+                  <p className="text-blue-900 font-semibold mb-4">{member.role}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </CardContent>
               </Card>
@@ -205,19 +202,19 @@ const About = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Impact</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">10,000+</div>
+              <div className="text-4xl font-bold text-blue-900 mb-2">10,000+</div>
               <div className="text-gray-600">Students Helped</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-blue-900 mb-2">500+</div>
               <div className="text-gray-600">College Mentors</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
+              <div className="text-4xl font-bold text-blue-900 mb-2">85%</div>
               <div className="text-gray-600">Acceptance Rate to Top Choice</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$50M+</div>
+              <div className="text-4xl font-bold text-blue-900 mb-2">$50M+</div>
               <div className="text-gray-600">In Scholarships Earned</div>
             </div>
           </div>
@@ -228,19 +225,14 @@ const About = () => {
       <section className="bg-gray-900 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Mission
+            Ready to Start Your Journey?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Whether you're seeking guidance or want to become a mentor, you're part of our community.
+            Connect with college mentors who understand your path for just $20 per session.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-              <Link to="/book-session">Get Started</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800" asChild>
-              <Link to="/contact">Become a Mentor</Link>
-            </Button>
-          </div>
+          <Button size="lg" className="bg-blue-900 hover:bg-blue-800" asChild>
+            <Link to="/book-session">Book a Session</Link>
+          </Button>
         </div>
       </section>
     </div>

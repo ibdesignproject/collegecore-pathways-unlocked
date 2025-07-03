@@ -95,19 +95,16 @@ const Contact = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="text-2xl font-bold text-gray-900">
-                College<span className="text-blue-600">Core</span>
+                College<span className="text-blue-900">Core</span>
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/universities" className="text-gray-700 hover:text-blue-600 transition-colors">Universities</Link>
-              <Link to="/book-session" className="text-gray-700 hover:text-blue-600 transition-colors">Book a Session</Link>
-              <Link to="/community" className="text-gray-700 hover:text-blue-600 transition-colors">Community</Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
-              <Link to="/contact" className="text-blue-600 font-medium">Contact</Link>
+              <Link to="/" className="text-gray-700 hover:text-blue-900 transition-colors">Home</Link>
+              <Link to="/universities" className="text-gray-700 hover:text-blue-900 transition-colors">Universities</Link>
+              <Link to="/book-session" className="text-gray-700 hover:text-blue-900 transition-colors">Book a Session</Link>
+              <Link to="/about" className="text-gray-700 hover:text-blue-900 transition-colors">About</Link>
+              <Link to="/contact" className="text-blue-900 font-medium">Contact</Link>
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Join Now
-            </Button>
           </div>
         </div>
       </nav>
@@ -133,14 +130,14 @@ const Contact = () => {
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <method.icon className="h-8 w-8 text-blue-600" />
+                    <method.icon className="h-8 w-8 text-blue-900" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{method.title}</h3>
                   <p className="text-sm text-gray-600 mb-3">{method.description}</p>
                   {method.action ? (
                     <a 
                       href={method.action}
-                      className="text-blue-600 hover:text-blue-700 font-semibold"
+                      className="text-blue-900 hover:text-blue-700 font-semibold"
                     >
                       {method.contact}
                     </a>
@@ -214,7 +211,7 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button type="submit" className="w-full bg-blue-900 hover:bg-blue-800">
                     Send Message
                   </Button>
                 </form>
@@ -272,7 +269,7 @@ const Contact = () => {
                   {socialCommunities.map((community, index) => (
                     <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center">
-                        <community.icon className="h-6 w-6 text-blue-600 mr-3" />
+                        <community.icon className="h-6 w-6 text-blue-900 mr-3" />
                         <div>
                           <div className="font-semibold text-gray-900">{community.platform}</div>
                           <div className="text-sm text-gray-600">{community.description}</div>
@@ -282,7 +279,7 @@ const Contact = () => {
                         href={community.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
+                        className="text-blue-900 hover:text-blue-700 font-semibold text-sm"
                       >
                         Follow
                       </a>
@@ -304,7 +301,7 @@ const Contact = () => {
           <p className="text-xl text-gray-300 mb-8">
             Don't wait to get the guidance you need. Book a session with one of our college mentors today.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+          <Button size="lg" className="bg-blue-900 hover:bg-blue-800" asChild>
             <Link to="/book-session">Book Your First Session</Link>
           </Button>
         </div>

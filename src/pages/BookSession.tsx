@@ -1,38 +1,74 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar, Clock, User, DollarSign } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Star, MapPin, Calendar, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import LogoProcessor from "@/components/LogoProcessor";
 
 const BookSession = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [service, setService] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically handle the form submission,
-    // such as sending the data to a server.
-    console.log("Form submitted", { name, email, phone, message, date, time, service });
-    // Reset form fields after submission
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-    setDate("");
-    setTime("");
-    setService("");
-  };
+  const mentors = [
+    {
+      id: 1,
+      name: "Sarah Chen",
+      university: "Harvard University",
+      major: "Computer Science",
+      year: "Senior",
+      rating: 4.9,
+      reviews: 127,
+      location: "Cambridge, MA",
+      image: "/placeholder.svg",
+      introduction: "Hey there! I'm Sarah, a senior at Harvard studying Computer Science. I've helped over 100 students with college applications, essays, and navigating the admissions process. I specialize in STEM applications and can share insights about Ivy League admissions.",
+      specialties: ["College Applications", "Essay Review", "STEM Programs", "Ivy League"],
+      calendlyLink: "https://calendly.com/sarah-chen-mentor",
+      hourlyRate: 20
+    },
+    {
+      id: 2,
+      name: "Marcus Johnson",
+      university: "Stanford University",
+      major: "Business Administration",
+      year: "Junior",
+      rating: 4.8,
+      reviews: 89,
+      location: "Palo Alto, CA",
+      image: "/placeholder.svg",
+      introduction: "Hi! I'm Marcus, currently studying Business at Stanford. I'm passionate about helping students discover their potential and navigate the college journey. I focus on business school applications, entrepreneurship, and leadership development.",
+      specialties: ["Business School Prep", "Leadership Development", "Entrepreneurship", "Career Guidance"],
+      calendlyLink: "https://calendly.com/marcus-johnson-mentor",
+      hourlyRate: 20
+    },
+    {
+      id: 3,
+      name: "Emily Rodriguez",
+      university: "MIT",
+      major: "Bioengineering",
+      year: "Graduate Student",
+      rating: 5.0,
+      reviews: 156,
+      location: "Cambridge, MA",
+      image: "/placeholder.svg",
+      introduction: "Hello! I'm Emily, a graduate student in Bioengineering at MIT. With my experience in both undergraduate and graduate admissions, I can help you with technical program applications, research opportunities, and academic planning.",
+      specialties: ["Graduate School Prep", "Research Programs", "Bioengineering", "Academic Planning"],
+      calendlyLink: "https://calendly.com/emily-rodriguez-mentor",
+      hourlyRate: 20
+    },
+    {
+      id: 4,
+      name: "David Kim",
+      university: "University of California, Berkeley",
+      major: "Economics & Political Science",
+      year: "Senior",
+      rating: 4.7,
+      reviews: 73,
+      location: "Berkeley, CA",
+      image: "/placeholder.svg",
+      introduction: "Hi everyone! I'm David, double majoring in Economics and Political Science at UC Berkeley. I love helping students with college planning, scholarship applications, and finding the right fit for their academic and career goals.",
+      specialties: ["College Planning", "Scholarship Applications", "Economics Programs", "Public Policy"],
+      calendlyLink: "https://calendly.com/david-kim-mentor",
+      hourlyRate: 20
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -64,148 +100,94 @@ const BookSession = () => {
       <section className="bg-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            Book a Session with Our Expert Mentors
+            Meet Our Expert Mentors
           </h1>
           <p className="text-xl text-gray-600 mb-12">
-            Get personalized guidance and support from experienced college students.
+            Connect with current college students who understand your journey. Book a personalized session for just $20.
           </p>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <Card className="shadow-lg border-none">
-            <CardHeader className="bg-blue-900 text-white p-6">
-              <CardTitle className="text-2xl font-bold">
-                One-on-One Mentoring Session
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                <DollarSign className="h-6 w-6 mr-2 text-blue-900" />
-                <span className="text-3xl font-bold text-gray-900">$20</span>
-                <span className="text-gray-600"> / session</span>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                Personalized mentoring session with a current college student. Get answers
-                to your questions, receive application advice, and gain insider insights.
-              </p>
-            </CardContent>
-          </Card>
+      {/* Mentors Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {mentors.map((mentor) => (
+              <Card key={mentor.id} className="shadow-lg border-none hover:shadow-xl transition-shadow">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start space-x-4">
+                    <img 
+                      src={mentor.image} 
+                      alt={mentor.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">{mentor.name}</CardTitle>
+                      <p className="text-blue-900 font-semibold">{mentor.university}</p>
+                      <p className="text-gray-600">{mentor.major} • {mentor.year}</p>
+                      <div className="flex items-center mt-2 space-x-4">
+                        <div className="flex items-center">
+                          <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                          <span className="ml-1 text-sm font-medium">{mentor.rating}</span>
+                          <span className="ml-1 text-sm text-gray-500">({mentor.reviews} reviews)</span>
+                        </div>
+                        <div className="flex items-center text-gray-500">
+                          <MapPin className="h-4 w-4 mr-1" />
+                          <span className="text-sm">{mentor.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    {mentor.introduction}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Specialties:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {mentor.specialties.map((specialty, index) => (
+                        <Badge key={index} variant="secondary" className="bg-blue-100 text-blue-900">
+                          {specialty}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-2xl font-bold text-gray-900">
+                      ${mentor.hourlyRate}/session
+                    </div>
+                    <Button 
+                      className="bg-blue-900 hover:bg-blue-800"
+                      onClick={() => window.open(mentor.calendlyLink, '_blank')}
+                    >
+                      <Calendar className="h-4 w-4 mr-2" />
+                      Book Session
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Booking Form Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Book Your Session
+      {/* CTA Section */}
+      <section className="bg-gray-900 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
           </h2>
-          <Card className="shadow-lg border-none">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
-                    Name
-                  </Label>
-                  <Input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                    Email
-                  </Label>
-                  <Input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
-                    Phone
-                  </Label>
-                  <Input
-                    type="tel"
-                    id="phone"
-                    placeholder="Your Phone Number"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="service" className="block text-gray-700 text-sm font-bold mb-2">
-                    Service
-                  </Label>
-                  <Select onValueChange={setService}>
-                    <SelectTrigger className="w-full text-left shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="College Counseling">College Counseling</SelectItem>
-                      <SelectItem value="Essay Review">Essay Review</SelectItem>
-                      <SelectItem value="Career Guidance">Career Guidance</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="date" className="block text-gray-700 text-sm font-bold mb-2">
-                    Date
-                  </Label>
-                  <Input
-                    type="date"
-                    id="date"
-                    value={date}
-                    onChange={(e) => setDate(e.target.value)}
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="time" className="block text-gray-700 text-sm font-bold mb-2">
-                    Time
-                  </Label>
-                  <Input
-                    type="time"
-                    id="time"
-                    value={time}
-                    onChange={(e) => setTime(e.target.value)}
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Your Message"
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <Button type="submit" className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Book Now
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <p className="text-xl text-gray-300 mb-8">
+            Choose a mentor that matches your goals and book your personalized session today.
+          </p>
+          <p className="text-gray-400">
+            All sessions are conducted via video call and include personalized advice, 
+            application review, and follow-up resources.
+          </p>
         </div>
       </section>
     </div>

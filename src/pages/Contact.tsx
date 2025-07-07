@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import LogoProcessor from "@/components/LogoProcessor";
 
 const Contact = () => {
   const contactInfo = [
@@ -44,10 +46,10 @@ const Contact = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img 
-                  src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" 
+                <LogoProcessor 
+                  originalSrc="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png"
                   alt="CollegeCore" 
-                  className="h-12 w-auto object-contain mix-blend-multiply" 
+                  className="h-16 w-auto object-contain" 
                 />
               </Link>
             </div>

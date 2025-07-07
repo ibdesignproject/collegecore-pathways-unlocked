@@ -14,7 +14,7 @@ const Index = () => {
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
                 <LogoProcessor 
-                  originalSrc="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png"
+                  originalSrc="/lovable-uploads/746c5949-bbcb-4899-8630-0088239dc95d.png"
                   alt="CollegeCore" 
                   className="h-16 w-auto object-contain" 
                 />
@@ -124,7 +124,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <LogoProcessor 
-                originalSrc="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png"
+                originalSrc="/lovable-uploads/746c5949-bbcb-4899-8630-0088239dc95d.png"
                 alt="CollegeCore" 
                 className="h-12 w-auto object-contain mb-4" 
               />

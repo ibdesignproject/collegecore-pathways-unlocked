@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Users, TrendingUp, Phone, Mail, Instagram } from "lucide-react";
@@ -13,7 +12,11 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" alt="CollegeCore" className="h-8" />
+                <img 
+                  src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" 
+                  alt="CollegeCore" 
+                  className="h-12 w-auto object-contain mix-blend-multiply" 
+                />
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -119,7 +122,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" alt="CollegeCore" className="h-8 mb-4" />
+              <img 
+                src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" 
+                alt="CollegeCore" 
+                className="h-12 w-auto object-contain mix-blend-multiply mb-4" 
+              />
               <p className="text-gray-600">
                 Connecting high school students with college mentors for real guidance and support.
               </p>

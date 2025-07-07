@@ -57,7 +57,11 @@ const About = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" alt="CollegeCore" className="h-8" />
+                <img 
+                  src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" 
+                  alt="CollegeCore" 
+                  className="h-12 w-auto object-contain mix-blend-multiply" 
+                />
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">

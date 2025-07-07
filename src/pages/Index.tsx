@@ -12,8 +12,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-gray-900">
-                College<span className="text-blue-900">Core</span>
+              <Link to="/" className="flex items-center">
+                <img src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" alt="CollegeCore" className="h-8" />
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -119,9 +119,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                College<span className="text-blue-900">Core</span>
-              </h3>
+              <img src="/lovable-uploads/63b6b9ee-5908-441f-8f3e-1a50cf6e8409.png" alt="CollegeCore" className="h-8 mb-4" />
               <p className="text-gray-600">
                 Connecting high school students with college mentors for real guidance and support.
               </p>

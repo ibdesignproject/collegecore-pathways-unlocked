@@ -2,7 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Calendar, ExternalLink } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Star, MapPin, Calendar, ExternalLink, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import LogoProcessor from "@/components/LogoProcessor";
 
@@ -17,7 +18,6 @@ const BookSession = () => {
       rating: 4.9,
       reviews: 127,
       location: "Cambridge, MA",
-      image: "/placeholder.svg",
       introduction: "Hey there! I'm Sarah, a senior at Harvard studying Computer Science. I've helped over 100 students with college applications, essays, and navigating the admissions process. I specialize in STEM applications and can share insights about Ivy League admissions.",
       specialties: ["College Applications", "Essay Review", "STEM Programs", "Ivy League"],
       calendlyLink: "https://calendly.com/sarah-chen-mentor",
@@ -32,7 +32,6 @@ const BookSession = () => {
       rating: 4.8,
       reviews: 89,
       location: "Palo Alto, CA",
-      image: "/placeholder.svg",
       introduction: "Hi! I'm Marcus, currently studying Business at Stanford. I'm passionate about helping students discover their potential and navigate the college journey. I focus on business school applications, entrepreneurship, and leadership development.",
       specialties: ["Business School Prep", "Leadership Development", "Entrepreneurship", "Career Guidance"],
       calendlyLink: "https://calendly.com/marcus-johnson-mentor",
@@ -47,7 +46,6 @@ const BookSession = () => {
       rating: 5.0,
       reviews: 156,
       location: "Cambridge, MA",
-      image: "/placeholder.svg",
       introduction: "Hello! I'm Emily, a graduate student in Bioengineering at MIT. With my experience in both undergraduate and graduate admissions, I can help you with technical program applications, research opportunities, and academic planning.",
       specialties: ["Graduate School Prep", "Research Programs", "Bioengineering", "Academic Planning"],
       calendlyLink: "https://calendly.com/emily-rodriguez-mentor",
@@ -62,7 +60,6 @@ const BookSession = () => {
       rating: 4.7,
       reviews: 73,
       location: "Berkeley, CA",
-      image: "/placeholder.svg",
       introduction: "Hi everyone! I'm David, double majoring in Economics and Political Science at UC Berkeley. I love helping students with college planning, scholarship applications, and finding the right fit for their academic and career goals.",
       specialties: ["College Planning", "Scholarship Applications", "Economics Programs", "Public Policy"],
       calendlyLink: "https://calendly.com/david-kim-mentor",
@@ -116,11 +113,11 @@ const BookSession = () => {
               <Card key={mentor.id} className="shadow-lg border-none hover:shadow-xl transition-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-start space-x-4">
-                    <img 
-                      src={mentor.image} 
-                      alt={mentor.name}
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
+                    <Avatar className="w-16 h-16">
+                      <AvatarFallback className="bg-blue-100 text-blue-900 text-lg font-semibold">
+                        {mentor.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
                     <div className="flex-1">
                       <CardTitle className="text-xl mb-2">{mentor.name}</CardTitle>
                       <p className="text-blue-900 font-semibold">{mentor.university}</p>

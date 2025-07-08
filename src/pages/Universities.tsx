@@ -11,7 +11,6 @@ const Universities = () => {
     {
       name: "Massachusetts Institute of Technology",
       shortName: "MIT",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
       acceptanceRate: "4%",
       stats: {
         satRange: "1540-1580",
@@ -33,7 +32,6 @@ const Universities = () => {
     {
       name: "Harvard University",
       shortName: "Harvard",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "3%",
       stats: {
         satRange: "~1535 avg",
@@ -55,7 +53,6 @@ const Universities = () => {
     {
       name: "Stanford University",
       shortName: "Stanford",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
       acceptanceRate: "4%",
       stats: {
         satRange: "1500-1570",
@@ -77,7 +74,6 @@ const Universities = () => {
     {
       name: "Yale University",
       shortName: "Yale",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "5%",
       stats: {
         satRange: "1530-1570",
@@ -99,7 +95,6 @@ const Universities = () => {
     {
       name: "Princeton University",
       shortName: "Princeton",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "4%",
       stats: {
         satRange: "~1550 avg",
@@ -121,7 +116,6 @@ const Universities = () => {
     {
       name: "Brown University",
       shortName: "Brown",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "5%",
       stats: {
         satRange: "~1540 avg",
@@ -143,7 +137,6 @@ const Universities = () => {
     {
       name: "Dartmouth College",
       shortName: "Dartmouth",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "6%",
       stats: {
         satRange: "~1540 avg",
@@ -165,7 +158,6 @@ const Universities = () => {
     {
       name: "Cornell University",
       shortName: "Cornell",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "7%",
       stats: {
         satRange: "1560 avg",
@@ -187,7 +179,6 @@ const Universities = () => {
     {
       name: "University of Pennsylvania",
       shortName: "UPenn",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=300&fit=crop",
       acceptanceRate: "6%",
       stats: {
         satRange: "1570 avg",
@@ -209,7 +200,6 @@ const Universities = () => {
     {
       name: "UC Berkeley",
       shortName: "Berkeley",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
       acceptanceRate: "11%",
       stats: {
         satRange: "Not Considered",
@@ -231,7 +221,6 @@ const Universities = () => {
     {
       name: "UCLA",
       shortName: "UCLA",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
       acceptanceRate: "9%",
       stats: {
         satRange: "Not Considered",
@@ -253,7 +242,6 @@ const Universities = () => {
     {
       name: "UC San Diego",
       shortName: "UCSD",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
       acceptanceRate: "24%",
       stats: {
         satRange: "Not Considered",
@@ -275,7 +263,6 @@ const Universities = () => {
     {
       name: "University of Illinois Urbana-Champaign",
       shortName: "UIUC",
-      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop",
       acceptanceRate: "45%",
       stats: {
         satRange: "1510 avg",
@@ -297,7 +284,6 @@ const Universities = () => {
     {
       name: "University of Texas at Austin",
       shortName: "UT Austin",
-      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop",
       acceptanceRate: "31%",
       stats: {
         satRange: "~1410 avg",
@@ -319,7 +305,6 @@ const Universities = () => {
     {
       name: "San Diego State University",
       shortName: "SDSU",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop",
       acceptanceRate: "38%",
       stats: {
         satRange: "Not Considered",
@@ -384,13 +369,8 @@ const Universities = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {universities.map((university, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white border-blue-100">
-                <div className="relative">
-                  <img 
-                    src={university.image} 
-                    alt={university.name}
-                    className="w-full h-48 object-cover"
-                  />
+              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 bg-white border-blue-100">
+                <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6">
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-blue-900 text-white hover:bg-blue-800">
                       {university.acceptanceRate} acceptance
@@ -400,6 +380,9 @@ const Universities = () => {
                     <Badge className="bg-white text-blue-900 border-blue-900">
                       $20/session
                     </Badge>
+                  </div>
+                  <div className="mt-8 flex items-center justify-center">
+                    <GraduationCap className="h-16 w-16 text-blue-900" />
                   </div>
                 </div>
                 

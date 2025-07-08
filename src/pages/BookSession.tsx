@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Star, MapPin, Calendar, ExternalLink, User } from "lucide-react";
+import { Star, MapPin, Calendar, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import LogoProcessor from "@/components/LogoProcessor";
 
@@ -11,59 +11,80 @@ const BookSession = () => {
   const mentors = [
     {
       id: 1,
-      name: "Sarah Chen",
-      university: "Harvard University",
+      name: "Sarthak Ahuja",
+      university: "University of Illinois Urbana-Champaign (UIUC)",
       major: "Computer Science",
-      year: "Senior",
-      rating: 4.9,
-      reviews: 127,
-      location: "Cambridge, MA",
-      introduction: "Hey there! I'm Sarah, a senior at Harvard studying Computer Science. I've helped over 100 students with college applications, essays, and navigating the admissions process. I specialize in STEM applications and can share insights about Ivy League admissions.",
-      specialties: ["College Applications", "Essay Review", "STEM Programs", "Ivy League"],
-      calendlyLink: "https://calendly.com/sarah-chen-mentor",
-      hourlyRate: 20
+      year: "Rising Freshman",
+      introduction: "Hi! I'm Sarthak Ahuja, a rising freshman majoring in computer science at UIUC. I'm passionate about technology for a difference and supporting all of you highschool students through your journey to college.",
+      specialties: ["Computer Science", "College Applications", "Technology"],
+      calendlyLink: "https://calendly.com/sarthak-ahuja-mentor",
+      hourlyRate: 3
     },
     {
       id: 2,
-      name: "Marcus Johnson",
-      university: "Stanford University",
-      major: "Business Administration",
-      year: "Junior",
-      rating: 4.8,
-      reviews: 89,
-      location: "Palo Alto, CA",
-      introduction: "Hi! I'm Marcus, currently studying Business at Stanford. I'm passionate about helping students discover their potential and navigate the college journey. I focus on business school applications, entrepreneurship, and leadership development.",
-      specialties: ["Business School Prep", "Leadership Development", "Entrepreneurship", "Career Guidance"],
-      calendlyLink: "https://calendly.com/marcus-johnson-mentor",
-      hourlyRate: 20
+      name: "Pranav Patlola",
+      university: "Cornell University",
+      major: "Computer Science",
+      year: "Rising Sophomore",
+      introduction: "Hi! I'm Pranav Patlola, a rising sophomore majoring in computer science at Cornell University. I'm passionate about sharing my knowledge in robotics, programming, and innovation to others. Through mentoring, I hope to inspire students to explore, create, and grow in the tech world.",
+      specialties: ["Computer Science", "Robotics", "Programming", "Innovation"],
+      calendlyLink: "https://calendly.com/pranav-patlola-mentor",
+      hourlyRate: 3
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      university: "MIT",
-      major: "Bioengineering",
-      year: "Graduate Student",
-      rating: 5.0,
-      reviews: 156,
-      location: "Cambridge, MA",
-      introduction: "Hello! I'm Emily, a graduate student in Bioengineering at MIT. With my experience in both undergraduate and graduate admissions, I can help you with technical program applications, research opportunities, and academic planning.",
-      specialties: ["Graduate School Prep", "Research Programs", "Bioengineering", "Academic Planning"],
-      calendlyLink: "https://calendly.com/emily-rodriguez-mentor",
-      hourlyRate: 20
+      name: "Brian Jing",
+      university: "UC San Diego (UCSD)",
+      major: "Data Science",
+      year: "Incoming Sophomore",
+      introduction: "Hi, my name is Brian Jing and I'm an incoming sophomore at UC San Diego studying data science! I'm in Muir college at San Diego and currently doing a fellowship at a company called Klarbook. Please don't hesitate to reach out if you have any questions about UCSD or college in general.",
+      specialties: ["Data Science", "UCSD", "College Applications"],
+      calendlyLink: "https://calendly.com/brian-jing-mentor",
+      hourlyRate: 3
     },
     {
       id: 4,
-      name: "David Kim",
-      university: "University of California, Berkeley",
-      major: "Economics & Political Science",
-      year: "Senior",
-      rating: 4.7,
-      reviews: 73,
-      location: "Berkeley, CA",
-      introduction: "Hi everyone! I'm David, double majoring in Economics and Political Science at UC Berkeley. I love helping students with college planning, scholarship applications, and finding the right fit for their academic and career goals.",
-      specialties: ["College Planning", "Scholarship Applications", "Economics Programs", "Public Policy"],
-      calendlyLink: "https://calendly.com/david-kim-mentor",
-      hourlyRate: 20
+      name: "Tanvi Thodati",
+      university: "University of Texas at Austin (UTA)",
+      major: "Neuroscience and Plan II",
+      year: "Graduate (2021)",
+      introduction: "Hi there! My name is Thanvi, and I graduated from the University of Texas at Austin in 2021. I majored in Neuroscience and Plan II, with a minor in Anthropology. I was also a pre-medical student. I know applying to and planning for college can be overwhelming, and I always encourage students to just focus on being themselves and taking this time to really explore what they're interested in! Confidence and curiosity goes a long way!",
+      specialties: ["Neuroscience", "Pre-Med", "Anthropology", "College Planning"],
+      calendlyLink: "https://calendly.com/tanvi-thodati-mentor",
+      hourlyRate: 3
+    },
+    {
+      id: 5,
+      name: "Pranith Bollampally",
+      university: "San Diego State University (SDSU)",
+      major: "Computer Science",
+      year: "Incoming Sophomore",
+      introduction: "Hi! I'm Pranith Bollampally, an incoming sophomore majoring in Computer Science at San Diego State University. I'm passionate about artificial intelligence and software development, and I enjoy building creative tech solutions and working on projects that make a real-world impact.",
+      specialties: ["Computer Science", "AI", "Software Development"],
+      calendlyLink: "https://calendly.com/pranith-bollampally-mentor",
+      hourlyRate: 3
+    },
+    {
+      id: 6,
+      name: "Vishal Bansal",
+      university: "UC Berkeley (UCB)",
+      major: "Tech",
+      year: "Recent Graduate",
+      introduction: "HI! I'm Vishal Bansal, and I recently graduated from UC Berkley, I am a passionate tech enthusiast and am excited to support you in your college decision making and application journey.",
+      specialties: ["Technology", "UC Berkeley", "College Applications"],
+      calendlyLink: "https://calendly.com/vishal-bansal-mentor",
+      hourlyRate: 3
+    },
+    {
+      id: 7,
+      name: "Khushi Bansal",
+      university: "UC Berkeley (UCB)",
+      major: "General",
+      year: "Recent Graduate",
+      introduction: "Hi! I'm Khushi Bansal, and I recently graduated from UC Berkley, and I can't wait to support all of you through college core!",
+      specialties: ["UC Berkeley", "College Applications", "General Guidance"],
+      calendlyLink: "https://calendly.com/khushi-bansal-mentor",
+      hourlyRate: 3
     }
   ];
 
@@ -97,10 +118,10 @@ const BookSession = () => {
       <section className="bg-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            Meet Our Expert Mentors
+            Meet Our Student Mentors
           </h1>
           <p className="text-xl text-gray-600 mb-12">
-            Connect with current college students who understand your journey. Book a personalized session for just $20.
+            Connect with current college students volunteering to help you succeed. Book a personalized session for just $3.
           </p>
         </div>
       </section>
@@ -108,7 +129,7 @@ const BookSession = () => {
       {/* Mentors Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mentors.map((mentor) => (
               <Card key={mentor.id} className="shadow-lg border-none hover:shadow-xl transition-shadow">
                 <CardHeader className="pb-4">
@@ -122,22 +143,11 @@ const BookSession = () => {
                       <CardTitle className="text-xl mb-2">{mentor.name}</CardTitle>
                       <p className="text-blue-900 font-semibold">{mentor.university}</p>
                       <p className="text-gray-600">{mentor.major} • {mentor.year}</p>
-                      <div className="flex items-center mt-2 space-x-4">
-                        <div className="flex items-center">
-                          <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                          <span className="ml-1 text-sm font-medium">{mentor.rating}</span>
-                          <span className="ml-1 text-sm text-gray-500">({mentor.reviews} reviews)</span>
-                        </div>
-                        <div className="flex items-center text-gray-500">
-                          <MapPin className="h-4 w-4 mr-1" />
-                          <span className="text-sm">{mentor.location}</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
+                  <p className="text-gray-700 mb-4 leading-relaxed text-sm">
                     {mentor.introduction}
                   </p>
                   
@@ -145,7 +155,7 @@ const BookSession = () => {
                     <h4 className="font-semibold text-gray-900 mb-2">Specialties:</h4>
                     <div className="flex flex-wrap gap-2">
                       {mentor.specialties.map((specialty, index) => (
-                        <Badge key={index} variant="secondary" className="bg-blue-100 text-blue-900">
+                        <Badge key={index} variant="secondary" className="bg-blue-100 text-blue-900 text-xs">
                           {specialty}
                         </Badge>
                       ))}
@@ -179,11 +189,11 @@ const BookSession = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Choose a mentor that matches your goals and book your personalized session today.
+            Choose a mentor that matches your goals and book your personalized session today for just $3.
           </p>
           <p className="text-gray-400">
             All sessions are conducted via video call and include personalized advice, 
-            application review, and follow-up resources.
+            application review, and follow-up resources from current college students.
           </p>
         </div>
       </section>

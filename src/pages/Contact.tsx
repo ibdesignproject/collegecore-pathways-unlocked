@@ -13,17 +13,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "123 College Ave, Suite 400\nNew York, NY 10001"
+      content: "HOJO Dorms\nBoston University"
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "(555) 123-4567"
+      content: "949 836 7952"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "hello@collegecore.com"
+      content: "collegecore.launchx@gmail.com"
     },
     {
       icon: Clock,
@@ -34,8 +34,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement your form submission logic here
-    alert("Form submitted!");
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contact Form Submission from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const mailtoLink = `mailto:collegecore.launchx@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -112,7 +122,9 @@ const Contact = () => {
                   <Input 
                     type="text" 
                     id="name" 
+                    name="name"
                     placeholder="Enter your name" 
+                    required
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
                   />
                 </div>
@@ -123,7 +135,9 @@ const Contact = () => {
                   <Input 
                     type="email" 
                     id="email" 
+                    name="email"
                     placeholder="Enter your email" 
+                    required
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
                   />
                 </div>
@@ -133,7 +147,9 @@ const Contact = () => {
                   </Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Write your message here..."
+                    required
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   />
                 </div>

@@ -6,27 +6,6 @@ import { Heart, Target, Users, TrendingUp } from "lucide-react";
 import LogoProcessor from "@/components/LogoProcessor";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Alex Johnson",
-      role: "Co-Founder & CEO",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-      bio: "Harvard graduate passionate about democratizing college access. Previously worked in education policy."
-    },
-    {
-      name: "Priya Sharma",
-      role: "Co-Founder & CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face",
-      bio: "Stanford CS graduate who believes in the power of peer-to-peer learning and mentorship."
-    },
-    {
-      name: "Michael Chen",
-      role: "Head of Community",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-      bio: "MIT graduate focused on building supportive communities for students navigating college admissions."
-    }
-  ];
-
   const values = [
     {
       icon: Heart,
@@ -174,35 +153,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-600">Passionate educators and innovators dedicated to your success</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-blue-100"
-                  />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-900 font-semibold mb-4">{member.role}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Impact Stats */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Impact</h2>
           <div className="grid md:grid-cols-4 gap-8">

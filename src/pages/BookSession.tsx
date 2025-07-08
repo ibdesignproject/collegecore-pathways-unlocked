@@ -18,7 +18,7 @@ const BookSession = () => {
       introduction: "Hi! I'm Sarthak Ahuja, a rising freshman majoring in computer science at UIUC. I'm passionate about technology for a difference and supporting all of you highschool students through your journey to college.",
       specialties: ["Computer Science", "College Applications", "Technology"],
       calendlyLink: "https://calendly.com/sarthak-ahuja-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const BookSession = () => {
       introduction: "Hi! I'm Pranav Patlola, a rising sophomore majoring in computer science at Cornell University. I'm passionate about sharing my knowledge in robotics, programming, and innovation to others. Through mentoring, I hope to inspire students to explore, create, and grow in the tech world.",
       specialties: ["Computer Science", "Robotics", "Programming", "Innovation"],
       calendlyLink: "https://calendly.com/pranav-patlola-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const BookSession = () => {
       introduction: "Hi, my name is Brian Jing and I'm an incoming sophomore at UC San Diego studying data science! I'm in Muir college at San Diego and currently doing a fellowship at a company called Klarbook. Please don't hesitate to reach out if you have any questions about UCSD or college in general.",
       specialties: ["Data Science", "UCSD", "College Applications"],
       calendlyLink: "https://calendly.com/brian-jing-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const BookSession = () => {
       introduction: "Hi there! My name is Thanvi, and I graduated from the University of Texas at Austin in 2021. I majored in Neuroscience and Plan II, with a minor in Anthropology. I was also a pre-medical student. I know applying to and planning for college can be overwhelming, and I always encourage students to just focus on being themselves and taking this time to really explore what they're interested in! Confidence and curiosity goes a long way!",
       specialties: ["Neuroscience", "Pre-Med", "Anthropology", "College Planning"],
       calendlyLink: "https://calendly.com/tanvi-thodati-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ const BookSession = () => {
       introduction: "Hi! I'm Pranith Bollampally, an incoming sophomore majoring in Computer Science at San Diego State University. I'm passionate about artificial intelligence and software development, and I enjoy building creative tech solutions and working on projects that make a real-world impact.",
       specialties: ["Computer Science", "AI", "Software Development"],
       calendlyLink: "https://calendly.com/pranith-bollampally-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 6,
@@ -73,7 +73,7 @@ const BookSession = () => {
       introduction: "HI! I'm Vishal Bansal, and I recently graduated from UC Berkley, I am a passionate tech enthusiast and am excited to support you in your college decision making and application journey.",
       specialties: ["Technology", "UC Berkeley", "College Applications"],
       calendlyLink: "https://calendly.com/vishal-bansal-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     },
     {
       id: 7,
@@ -84,7 +84,7 @@ const BookSession = () => {
       introduction: "Hi! I'm Khushi Bansal, and I recently graduated from UC Berkley, and I can't wait to support all of you through college core!",
       specialties: ["UC Berkeley", "College Applications", "General Guidance"],
       calendlyLink: "https://calendly.com/khushi-bansal-mentor",
-      hourlyRate: 3
+      hourlyRate: 20
     }
   ];
 
